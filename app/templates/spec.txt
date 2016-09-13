@@ -4,7 +4,6 @@ import { mount } from 'enzyme'
 import chai from 'chai'
 import chaiEnzyme from 'chai-enzyme'
 
-import strings from '../../strings.config'
 import { <%= name %> } from './'
 
 chai.use(chaiEnzyme())

@@ -21,18 +21,18 @@ module.exports = generators.Base.extend({
       // defaults component type to `container`
       {
         type: 'confirm',
-        name: 'isContainer',
-        message: '\nIs this a container (has direct access to state)?'
+        name: 'isComponent',
+        message: '\nIs this a component (not a container)?'
       }
     ]).then(function (ans) {
-      const { compName, isContainer } = ans
+      const { compName, isComponent } = ans
 
       // Ensure component name is capitalized
       ans.compName = compName.charAt(0).toUpperCase() + compName.slice(1)
 
       // Write react component
       this.fs.copyTpl(
-        this.templatePath(isContainer ? 'container.txt' : 'component.txt'),
+        this.templatePath(isComponent ? 'component.txt' : 'container.txt'),
         this.destinationPath(`${ans.compName}/index.jsx`),
         { name: ans.compName, elm: ans.elmType }
       )
