@@ -4,7 +4,11 @@ import { mount } from 'enzyme'
 import chai from 'chai'
 import chaiEnzyme from 'chai-enzyme'
 
+<% if (isComp) { -%>
+import <%= name %> from './'
+<% } else { -%>
 import { <%= name %> } from './'
+<% } -%>
 
 chai.use(chaiEnzyme())
 

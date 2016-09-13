@@ -1,0 +1,15 @@
+import React from 'react'
+import { storiesOf, action } from '@kadira/storybook'
+
+<% if (isComp) { -%>
+import <%= name %> from './'
+<% } else { -%>
+import { <%= name %> } from './'
+<% } -%>
+
+const baseProps = {}
+
+storiesOf('<%= name %>', module)
+  .add('default', () => (
+    <<%= name %> {...baseProps} />
+  ))

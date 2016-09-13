@@ -32,27 +32,27 @@ module.exports = generators.Base.extend({
 
       // Write react component
       this.fs.copyTpl(
-        this.templatePath(isComponent ? 'component.txt' : 'container.txt'),
+        this.templatePath(isComponent ? 'component.ejs' : 'container.ejs'),
         this.destinationPath(`${ans.compName}/index.jsx`),
         { name: ans.compName, elm: ans.elmType }
       )
 
       // Write enzyme tests
       this.fs.copyTpl(
-        this.templatePath('spec.txt'),
+        this.templatePath('spec.ejs'),
         this.destinationPath(`${ans.compName}/index.spec.js`),
-        { name: ans.compName, elm: ans.elmType }
+        { name: ans.compName, elm: ans.elmType, isComp: ans.isComponent }
       )
 
       // Write react-storybook file
       this.fs.copyTpl(
-        this.templatePath('story.txt'),
+        this.templatePath('story.ejs'),
         this.destinationPath(`${ans.compName}/index.story.jsx`),
-        { name: ans.compName, elm: ans.elmType }
+        { name: ans.compName, elm: ans.elmType, isComp: ans.isComponent }
       )
 
       // Write scss styles
-      this.copy('styles.txt', `${ans.compName}/styles.scss`)
+      this.copy('styles.ejs', `${ans.compName}/styles.scss`)
     }.bind(this))
   }
 })
