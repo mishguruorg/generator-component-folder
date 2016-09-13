@@ -1,0 +1,13 @@
+import React from 'react'
+
+import styles from './styles.scss'
+
+const <%= name %> = props => {
+  return (
+    <<%= elm %> styles={styles.main}>
+      <h1><%= name %></h1>
+    </<%= elm %>>
+  )
+}
+
+export default <%= name %>

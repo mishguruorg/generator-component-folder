@@ -1,1 +1,3 @@
 ## Component folder generator
+
+## NAME

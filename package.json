@@ -4,8 +4,9 @@
   "description": "Generates a component directory that includes the component (.jsx), its tests (.spec.js), its story (.story.jsx), and its styles (.scss).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test_local mocha --compilers js:babel/register --recursive specs && standard"
   },
+  "files": ["app"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mishguruorg/generator-component-folder.git"
@@ -22,5 +23,14 @@
   "bugs": {
     "url": "https://github.com/mishguruorg/generator-component-folder/issues"
   },
-  "homepage": "https://github.com/mishguruorg/generator-component-folder#readme"
+  "homepage": "https://github.com/mishguruorg/generator-component-folder#readme",
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2",
+    "standard": "^8.0.0"
+  },
+  "dependencies": {
+    "yeoman-generator": "^0.24.1"
+  }
 }
