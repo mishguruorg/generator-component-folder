@@ -1,0 +1,26 @@
+{
+  "name": "generator-component-folder",
+  "version": "0.2.7",
+  "description": "Generates a component directory that includes the component (.jsx), its tests (.spec.js), its story (.story.jsx), and its styles (.scss).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mishguruorg/generator-component-folder.git"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "react",
+    "react-storybook",
+    "enzyme",
+    "meme"
+  ],
+  "author": "Mish Guru",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mishguruorg/generator-component-folder/issues"
+  },
+  "homepage": "https://github.com/mishguruorg/generator-component-folder#readme"
+}
