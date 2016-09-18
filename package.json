@@ -1,6 +1,6 @@
 {
   "name": "generator-component-folder",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "description": "Generates a component directory that includes the component (.jsx), its tests (.spec.js), its story (.story.jsx), and its styles (.scss).",
   "main": "index.js",
   "scripts": {
