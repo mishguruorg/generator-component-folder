@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import styles from './styles.scss'
 
-const <%= name %> = props => {
+const <%= name %> = () => {
   return (
     <<%= elm %> className={styles.main}>
       <h1><%= name %></h1>
@@ -11,7 +11,9 @@ const <%= name %> = props => {
   )
 }
 
-const mapStateToProps = (state, ownProps) => ({})
+const mapStateToProps = (state, ownProps) => {
+  return {}
+}
 
 export default connect(
   mapStateToProps

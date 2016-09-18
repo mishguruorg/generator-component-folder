@@ -15,8 +15,9 @@ chai.use(chaiEnzyme())
 const baseProps = {}
 
 describe('<<%= name %>/>', () => {
-  it('Should load a default meme', () => {
-    const wrapper = mount(<<%= name %> {...baseProps} />)
+  const wrapper = mount(<<%= name %> {...baseProps} />)
+
+  it('Loads OK.', () => {
     chai.expect(wrapper.find('<%= elm %>')).to.exist
   })
 })

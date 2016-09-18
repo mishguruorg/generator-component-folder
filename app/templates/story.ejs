@@ -7,9 +7,11 @@ import <%= name %> from './'
 import { <%= name %> } from './'
 <% } -%>
 
+const stories = storiesOf('<%= name %>', module)
+
 const baseProps = {}
 
-storiesOf('<%= name %>', module)
-  .add('default', () => (
-    <<%= name %> {...baseProps} />
-  ))
+stories
+.add('default', () => (
+  <<%= name %> {...baseProps} />
+))
