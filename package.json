@@ -1,5 +1,5 @@
 {
-  "name": "generator-component-folder",
+  "name": "generator-mish-component-folder",
   "version": "0.3.0",
   "description": "Generates a component directory that includes the component (.jsx), its tests (.spec.js), its story (.story.jsx), and its styles (.scss).",
   "main": "index.js",
