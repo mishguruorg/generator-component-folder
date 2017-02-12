@@ -4,7 +4,7 @@
   "description": "Generates a component directory that includes the component (.jsx), its tests (.spec.js), its story (.story.jsx), and its styles (.scss).",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test_local mocha --compilers js:babel/register --recursive specs && standard"
+    "test": "standard"
   },
   "files": [
     "app"
@@ -28,8 +28,6 @@
   "homepage": "https://github.com/mishguruorg/generator-component-folder#readme",
   "devDependencies": {
     "babel-eslint": "^6.1.2",
-    "chai": "^3.5.0",
-    "mocha": "^3.0.2",
     "standard": "^8.0.0"
   },
   "dependencies": {

@@ -1,8 +1,7 @@
 /* globals describe, it */
 import React from 'react'
+import test from 'ava'
 import { mount } from 'enzyme'
-import chai from 'chai'
-import chaiEnzyme from 'chai-enzyme'
 
 <% if (isComp) { -%>
 import <%= name %> from './'
@@ -10,14 +9,11 @@ import <%= name %> from './'
 import { <%= name %> } from './'
 <% } -%>
 
-chai.use(chaiEnzyme())
-
 const baseProps = {}
 
-describe('<<%= name %>/>', () => {
-  const wrapper = mount(<<%= name %> {...baseProps} />)
-
-  it('Loads OK.', () => {
-    chai.expect(wrapper.find('<%= elm %>')).to.exist
-  })
+test('<<%= name %>/>', t => {
+  const wrapper = mount(
+    <<%= name %> {...baseProps} />
+  )
+  t.truthy(wrapper.find('<%= elm %>'))
 })
